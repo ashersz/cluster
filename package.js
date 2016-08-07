@@ -2,7 +2,7 @@ Package.describe({
   "summary": "Clustering solution for Meteor with load balancing and service discovery.",
   "version": "1.7.3",
   "git": "https://github.com/ashersz/cluster.git",
-  "name": "ashersz:cluster"
+  "name": "cu-cluster"
 });
 
 Npm.depends({
@@ -27,8 +27,8 @@ Package.onTest(function(api) {
     'tests/server/discovery_backends/mongo/discovery.js',
     'tests/server/balancer/utils.js',
     'tests/server/balancer/route.js',
-    'tests/server/balancer/workers.js',
-  ], 'server');
+    'tests/server/balancer/workers.js'
+      ], 'server');
 });
 
 Package.onUse(function(api) {
@@ -45,7 +45,7 @@ function configurePackage(api) {
 
   api.addFiles([
     'lib/namespace.js',
-    'lib/connection_watcher.js',
+    'lib/connection_watcher.js'
   ], ['server', 'client']);
 
   api.addFiles([
@@ -58,7 +58,8 @@ function configurePackage(api) {
     'lib/server/balancer/utils.js',
     'lib/server/balancer/workers.js',
     'lib/server/balancer/route.js',
-    'lib/server/auto_connect.js'
+    'lib/server/auto_connect.js',
+    'lib/server/methods.js'
   ], ['server']);
 
   api.addFiles([
